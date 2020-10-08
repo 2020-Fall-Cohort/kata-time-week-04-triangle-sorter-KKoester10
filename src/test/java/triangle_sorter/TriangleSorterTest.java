@@ -30,5 +30,11 @@ public class TriangleSorterTest {
         String triangleType = underTest.analyze(2,3,4);
         assertThat(triangleType, is("Triangle"));
     }
+    @Test
+    public void canNotBeFormedIntoTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(2, 3, 5);
+        assertThat(triangleType, is("Not a Triangle"));
+    }
 }
 
