@@ -42,5 +42,11 @@ public class TriangleSorterTest {
         String triangleType = underTest.analyze(6, 6, 6);
         assertThat(triangleType, is("Equilateral"));
     }
+    @Test
+    public void twoEqualSidesIsAnIsoscelesTriangleWithNumberSix(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(6,6,3);
+        assertThat(triangleType, is("Isosceles"));
+    }
 }
 
