@@ -51,8 +51,20 @@ public class TriangleSorterTest {
     @Test
     public void sideCIsGreaterThenSideAIsAnRightTriangleWithDifferentNumbers(){
         TriangleSorter underTest = new TriangleSorter();
-        String triangleType = underTest.analyze(4,5,6);
+        String triangleType = underTest.analyze(3,4,5);
         assertThat(triangleType, is("Right Triangle"));
+    }
+    @Test
+    public void canBeFormedIntoTriangleButNotOtherTrianglesWithDifferentNumbers(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(7,10,5);
+        assertThat(triangleType, is("Triangle"));
+    }
+    @Test
+    public void NotATriangle(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(1,10,12);
+        assertThat(triangleType, is("Not a Triangle"));
     }
 }
 

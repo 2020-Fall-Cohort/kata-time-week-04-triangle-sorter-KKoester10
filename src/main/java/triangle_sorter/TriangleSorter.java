@@ -8,7 +8,7 @@ public class TriangleSorter {
             return "Isosceles";
         }else if((sideA * sideA + sideB * sideB) / sideC == sideC){
             return "Right Triangle";
-        }else if(sideA == 2 && sideB == 3 & sideC == 4){
+        }else if(sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA){
             return "Triangle";
         }
         return "Not a Triangle";
