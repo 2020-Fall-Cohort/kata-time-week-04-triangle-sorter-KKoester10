@@ -48,5 +48,11 @@ public class TriangleSorterTest {
         String triangleType = underTest.analyze(6,6,3);
         assertThat(triangleType, is("Isosceles"));
     }
+    @Test
+    public void sideCIsGreaterThenSideAIsAnRightTriangleWithDifferentNumbers(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(4,5,6);
+        assertThat(triangleType, is("Right Triangle"));
+    }
 }
 

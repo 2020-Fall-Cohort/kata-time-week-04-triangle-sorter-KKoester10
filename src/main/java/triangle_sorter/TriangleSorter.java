@@ -6,7 +6,7 @@ public class TriangleSorter {
             return "Equilateral";
         }else if(sideA == sideB){
             return "Isosceles";
-        }else if(sideA == 3 && sideB == 4 & sideC == 5){
+        }else if((sideA * sideA + sideB * sideB) / sideC == sideC){
             return "Right Triangle";
         }else if(sideA == 2 && sideB == 3 & sideC == 4){
             return "Triangle";
