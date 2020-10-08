@@ -36,5 +36,11 @@ public class TriangleSorterTest {
         String triangleType = underTest.analyze(2, 3, 5);
         assertThat(triangleType, is("Not a Triangle"));
     }
+    @Test
+    public void threeEqualSidesIsAnEquilateralTriangleWithNumberSix() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(6, 6, 6);
+        assertThat(triangleType, is("Equilateral"));
+    }
 }
 

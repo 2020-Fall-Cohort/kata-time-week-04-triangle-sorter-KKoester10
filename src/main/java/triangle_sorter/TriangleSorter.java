@@ -2,7 +2,7 @@ package triangle_sorter;
 
 public class TriangleSorter {
     public String analyze(int sideA, int sideB, int sideC) {
-        if (sideA == 3 && sideB == 3 & sideC == 3){
+        if (sideA == sideB && sideB == sideC){
             return "Equilateral";
         }else if(sideA == 5 && sideB == 5 & sideC == 3){
             return "Isosceles";
